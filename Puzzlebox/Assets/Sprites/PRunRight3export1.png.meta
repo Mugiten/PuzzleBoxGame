@@ -1,0 +1,309 @@
+fileFormatVersion: 2
+guid: a09ecf1524a6c6f46aebf2e3c235e274
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PRunRight3export1_0
+    21300002: PRunRight3export1_1
+    21300004: PRunRight3export1_2
+    21300006: PRunRight3export1_3
+    21300008: PRunRight3export1_4
+    21300010: PRunRight3export1_5
+    21300012: PRunRight3export1_6
+    21300014: PRunRight3export1_7
+    21300016: PRunRight3export1_8
+    21300018: PRunRight3export1_9
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PRunRight3export1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 289
+        width: 28
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0.11114344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c97dff11c82faa249b7ab2aa5bf33f8a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PRunRight3export1_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 257
+        width: 29
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0.11114344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d37b4b9a45fda40abbde5e93ae60f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PRunRight3export1_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 225
+        width: 29
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5, y: 0.11114344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2bce18f8c1d8594ea5d4dc69b92519e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PRunRight3export1_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 193
+        width: 27
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5, y: 0.11114344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ff9d51c20320e4b8687f820cb6064d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PRunRight3export1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 161
+        width: 27
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5, y: 0.11114344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1565a2da8f8235c47bed18748fe86a61
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PRunRight3export1_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 129
+        width: 28
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0.11114344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2da9dcfafe8859841b9f75a7c69f18a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PRunRight3export1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 97
+        width: 29
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0.11114344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 164b99acb1c39b5408ca8690d66bac86
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PRunRight3export1_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 65
+        width: 29
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5, y: 0.11114344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115bb7e1f03e5264491e40859f071a83
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PRunRight3export1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 33
+        width: 28
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5, y: 0.11114344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd5cd30c228a484cbaf5ad51342b42d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PRunRight3export1_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 26
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5, y: 0.11114344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db8cc85c4203b644b83b0ca1fa4f2ac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3811d5df337828d419adedb7275aa512
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
