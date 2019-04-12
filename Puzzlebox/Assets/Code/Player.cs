@@ -13,6 +13,10 @@ public class Player : MonoBehaviour
     private Animator playerAnimator;
     public static Player instance;
     public string areaTransitionName;
+
+    private Vector3 bottomLeftLimit;
+    private Vector3 topRightLimit;
+
     void Start()
     {
         if (instance == null)
@@ -38,7 +42,15 @@ public class Player : MonoBehaviour
             playerAnimator.SetFloat("lastDirX", Input.GetAxisRaw("Horizontal"));
             playerAnimator.SetFloat("lastDirY", Input.GetAxisRaw("Vertical"));
         }
-        else {
-        }
+
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x), Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
+
+
+    }
+
+    public void SetBounds(Vector3 botLeft, Vector3 topRight) {
+        bottomLeftLimit = botLeft + new Vector3(1f, 0f, 0f);
+        topRightLimit = topRight + new Vector3(-1f, -1f, 0f);
+            
     }
 }
