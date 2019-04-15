@@ -10,6 +10,9 @@ public class AreaExit : MonoBehaviour
     public string areaTransitionName;
 
     public AreaEntrance entrance;
+    public float waitToLoad = 1f;
+    public bool shouldLoadAfterFade;
+
     void Start()
     {
         entrance.transitionName = areaTransitionName;
@@ -24,7 +27,11 @@ public class AreaExit : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player") {
-            SceneManager.LoadScene(areaToLoad);
+
+            //SceneManager.LoadScene(areaToLoad);
+
+            shouldLoadAfterFade = true;
+            UIFade.instance.FadeToBlack();
 
             Player.instance.areaTransitionName = this.areaTransitionName;
         }
