@@ -63,7 +63,8 @@
     <Compile Include="Assets\Code\AreaEntrance.cs" />
     <Compile Include="Assets\Code\AreaExit.cs" />
     <Compile Include="Assets\Code\CameraController.cs" />
-    <Compile Include="Assets\Code\DialogManagaer.cs" />
+    <Compile Include="Assets\Code\DialogActivator.cs" />
+    <Compile Include="Assets\Code\DialogManager.cs" />
     <Compile Include="Assets\Code\EssentialsLoader.cs" />
     <Compile Include="Assets\Code\Player.cs" />
     <Compile Include="Assets\Code\PlayerLoader.cs" />

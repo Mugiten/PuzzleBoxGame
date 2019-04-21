@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &711005764
 RectTransform:
   m_ObjectHideFlags: 0
@@ -443,7 +443,10 @@ MonoBehaviour:
   nameText: {fileID: 1201122419}
   dialogbox: {fileID: 711005763}
   nameBox: {fileID: 2062295030}
-  dialogLines: []
+  dialogLines:
+  - I
+  - am
+  - A.Wake
   currentLine: 0
 --- !u!1 &5934625692590474420
 GameObject:
