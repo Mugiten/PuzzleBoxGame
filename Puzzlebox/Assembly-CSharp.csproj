@@ -68,6 +68,7 @@
     <Compile Include="Assets\Code\EssentialsLoader.cs" />
     <Compile Include="Assets\Code\Player.cs" />
     <Compile Include="Assets\Code\PlayerLoader.cs" />
+    <Compile Include="Assets\Code\PlayerStats.cs" />
     <Compile Include="Assets\Code\UIFade.cs" />
     <None Include="Assets\Sprites\Zoria Tileset\readme.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">

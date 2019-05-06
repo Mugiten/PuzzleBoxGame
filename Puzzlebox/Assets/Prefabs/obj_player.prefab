@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1496906703896046771}
   - component: {fileID: 1496906703896046770}
   - component: {fileID: 1496906703896046765}
+  - component: {fileID: 6594432002967174792}
   m_Layer: 0
   m_Name: obj_player
   m_TagString: Player
@@ -99,6 +100,7 @@ MonoBehaviour:
   rgdbdy: {fileID: 1496906703896046770}
   playerAnimator: {fileID: 1496906703896046765}
   areaTransitionName: 
+  canMove: 1
 --- !u!58 &1496906703896046771
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -155,3 +157,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6594432002967174792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496906703896046775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7d271a143846f45b1a36ddead3a8fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHP: 0
+  fullHP: 0
+  attackPwr: 0
+  playerStamina: 3
+  fullStamina: 0
