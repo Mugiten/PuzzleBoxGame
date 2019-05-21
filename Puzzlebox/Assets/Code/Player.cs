@@ -75,34 +75,21 @@ public class Player : MonoBehaviour
     }
 
     public void SlowTime() {
-
         if (Input.GetKey("x"))
         {
-            Time.timeScale = 0.1F;
-            Time.fixedDeltaTime = 0.02F * Time.timeScale;
-        }
-
-        else {
-            Time.timeScale = 1;
-            Time.fixedDeltaTime = 0.02F * Time.timeScale;
-        }
-        /*
-        if (PlayerStats.instance.playerStamina > 1)
+            if (PlayerStats.instance.playerStamina > 0)
             {
-            // Have another condition with a timer.
-            if (Input.GetKey("x")) {
-                Time.timeScale = 0.5F;
+                Time.timeScale = 0.1F;
                 Time.fixedDeltaTime = 0.02F * Time.timeScale;
-                PlayerStats.instance.playerStamina -= 1;
+                PlayerStats.instance.playerStamina--;
             }
         }
         else {
             Time.timeScale = 1;
             Time.fixedDeltaTime = 0.02F * Time.timeScale;
-            if (PlayerStats.instance.playerStamina < PlayerStats.instance.fullStamina)
-            {
-                PlayerStats.instance.playerStamina += 0.5f;
+            if (PlayerStats.instance.playerStamina < PlayerStats.instance.fullStamina) {
+                PlayerStats.instance.playerStamina++;
             }
-        }*/
+        }
     }
 }
