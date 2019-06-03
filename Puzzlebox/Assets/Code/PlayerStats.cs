@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class PlayerStats : MonoBehaviour
     public float playerStamina;
     public float fullStamina;
 
+    // Creating an array of hearts.
+    public Image[] hearts;
+    public Sprite fullHeart;
+    public Sprite emptyHeart;
+
+
     public static PlayerStats instance; 
     void Start()
     {
@@ -20,6 +27,28 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        UIHearts();
+    }
+
+    // Checks to see how many hearts the player has. 
+    public void UIHearts() {
+        for (int x = 0; x < hearts.Length; x++) {
+
+            if (x < playerHP)
+            {
+                hearts[x].sprite = fullHeart;
+            }
+            else {
+                hearts[x].sprite = emptyHeart;
+            }
+
+            if (x < fullHP)
+            {
+                hearts[x].enabled = true;
+            }
+            else {
+                hearts[x].enabled = false;
+            }
+        }
     }
 }

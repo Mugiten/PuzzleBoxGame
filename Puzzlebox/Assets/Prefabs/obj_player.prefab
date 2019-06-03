@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -462334121
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 30694f04cdd77b447b6c20197e803dd1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -169,8 +169,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7d271a143846f45b1a36ddead3a8fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHP: 0
-  fullHP: 0
+  playerHP: 3
+  fullHP: 3
   attackPwr: 0
-  playerStamina: 3
-  fullStamina: 0
+  playerStamina: 50
+  fullStamina: 50
+  hearts: []
+  fullHeart: {fileID: 0}
+  emptyHeart: {fileID: 0}

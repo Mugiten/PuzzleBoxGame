@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class Player : MonoBehaviour
 
     public bool canMove = true;
 
+    public Slider playerStaminaBar;
+
     void Start()
     {
         if (instance == null)
@@ -36,6 +39,9 @@ public class Player : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+
+        // initializing stamina
+        playerStaminaBar.value = PlayerStats.instance.playerStamina;
     }
 
     // Update is called once per frame
@@ -83,19 +89,19 @@ public class Player : MonoBehaviour
          */
     public void SlowTime() {
         usingStamina = false;
-
+        
         if (Input.GetKey("x"))
         {
-            PlayerStats.instance.playerStamina--;
-            if (PlayerStats.instance.playerStamina > 0F)
+            playerStaminaBar.value--;
+            if (playerStaminaBar.value > 0F)
             {
                 usingStamina = true;
             }
         }
         else {
-            if (PlayerStats.instance.playerStamina < PlayerStats.instance.fullStamina)
+            if (playerStaminaBar.value < PlayerStats.instance.fullStamina)
             {
-                PlayerStats.instance.playerStamina++;
+               playerStaminaBar.value++;
             }
         }
 

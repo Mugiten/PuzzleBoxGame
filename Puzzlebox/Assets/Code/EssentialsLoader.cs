@@ -8,9 +8,9 @@ public class EssentialsLoader : MonoBehaviour{
     public GameObject player;
     void Start()
     {
-        if (UIFade.instance == null) {
+        /*if (UIFade.instance == null) {
             Instantiate(UIScreen);
-        }
+        }*/
 
         if (Player.instance == null) {
             Player clone = Instantiate(player).GetComponent<Player>();
