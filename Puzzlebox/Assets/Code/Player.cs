@@ -25,6 +25,8 @@ public class Player : MonoBehaviour
 
     public Slider playerStaminaBar;
 
+    // Ghost effect
+
     void Start()
     {
         if (instance == null)
