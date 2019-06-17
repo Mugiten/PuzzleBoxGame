@@ -66,6 +66,7 @@
     <Compile Include="Assets\Code\DialogActivator.cs" />
     <Compile Include="Assets\Code\DialogManager.cs" />
     <Compile Include="Assets\Code\EssentialsLoader.cs" />
+    <Compile Include="Assets\Code\Ghost.cs" />
     <Compile Include="Assets\Code\Player.cs" />
     <Compile Include="Assets\Code\PlayerLoader.cs" />
     <Compile Include="Assets\Code\PlayerStats.cs" />

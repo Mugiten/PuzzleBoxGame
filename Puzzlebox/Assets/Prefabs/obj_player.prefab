@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1496906703896046770}
   - component: {fileID: 1496906703896046765}
   - component: {fileID: 6594432002967174792}
+  - component: {fileID: 5763853692219973979}
   m_Layer: 0
   m_Name: obj_player
   m_TagString: Player
@@ -101,6 +102,8 @@ MonoBehaviour:
   playerAnimator: {fileID: 1496906703896046765}
   areaTransitionName: 
   canMove: 1
+  playerStaminaBar: {fileID: 0}
+  ghost: {fileID: 5763853692219973979}
 --- !u!58 &1496906703896046771
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -177,3 +180,19 @@ MonoBehaviour:
   hearts: []
   fullHeart: {fileID: 0}
   emptyHeart: {fileID: 0}
+--- !u!114 &5763853692219973979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496906703896046775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff1b0fd8a473ca94fbb011d01a5042c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghostDelay: 0.1
+  ghostDelaySeconds: 0
+  ghost: {fileID: 3408957503220115756, guid: ef24998b7d780c34c973d6883fbbb20c, type: 3}
+  makeGhost: 0

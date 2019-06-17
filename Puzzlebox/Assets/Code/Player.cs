@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     public Slider playerStaminaBar;
 
     // Ghost effect
-
+    public Ghost ghost;
     void Start()
     {
         if (instance == null)
@@ -91,7 +91,7 @@ public class Player : MonoBehaviour
          */
     public void SlowTime() {
         usingStamina = false;
-        
+
         if (Input.GetKey("x"))
         {
             playerStaminaBar.value--;
@@ -109,10 +109,12 @@ public class Player : MonoBehaviour
 
         if (usingStamina)
         {
+            ghost.makeGhost = true;
             Time.timeScale = 0.1F;
             Time.fixedDeltaTime = 0.02F * Time.timeScale;
         }
         else {
+            ghost.makeGhost = false;
             Time.timeScale = 1;
             Time.fixedDeltaTime = 0.02F * Time.timeScale;
         }
