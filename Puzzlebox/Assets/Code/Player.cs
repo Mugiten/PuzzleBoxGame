@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+//Creating a state machine. Calling enum.
+public enum PlayerState
+{
+    walk,
+    attack
+}
+
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -27,8 +35,14 @@ public class Player : MonoBehaviour
 
     // Ghost effect
     public Ghost ghost;
+
+    //Creating a PlayerState
+    public PlayerState currentState;
+
+
     void Start()
     {
+        currentState = PlayerState.walk;
         if (instance == null)
         {
             instance = this;
@@ -49,27 +63,17 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Get the movement.
-        if (canMove)
+        
+
+        if (Input.GetKey("c") && currentState != PlayerState.attack) {
+            StartCoroutine(AttackCo());
+        }
+
+        if (currentState == PlayerState.walk)
         {
-            rgdbdy.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * speed;
+            PlayerMovement();
         }
 
-        else {
-            rgdbdy.velocity = Vector2.zero;
-        }
-
-        playerAnimator.SetFloat("moveX", rgdbdy.velocity.x);
-        playerAnimator.SetFloat("moveY", rgdbdy.velocity.y);
-
-        if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxis("Vertical") == 1 || Input.GetAxisRaw("Horizontal") == -1 || Input.GetAxisRaw("Vertical") == -1) {
-
-            if (canMove)
-            {
-                playerAnimator.SetFloat("lastDirX", Input.GetAxisRaw("Horizontal"));
-                playerAnimator.SetFloat("lastDirY", Input.GetAxisRaw("Vertical"));
-            }
-        }
 
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x), Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
 
@@ -83,6 +87,43 @@ public class Player : MonoBehaviour
         bottomLeftLimit = botLeft + new Vector3(1f, 0f, 0f);
         topRightLimit = topRight + new Vector3(-1f, -1f, 0f);
             
+    }
+
+    public void PlayerMovement() {
+        // Get the movement.
+        if (canMove)
+        {
+            rgdbdy.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * speed;
+        }
+
+        else
+        {
+            rgdbdy.velocity = Vector2.zero;
+        }
+
+        playerAnimator.SetFloat("moveX", rgdbdy.velocity.x);
+        playerAnimator.SetFloat("moveY", rgdbdy.velocity.y);
+
+        if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxis("Vertical") == 1 || Input.GetAxisRaw("Horizontal") == -1 || Input.GetAxisRaw("Vertical") == -1)
+        {
+
+            if (canMove)
+            {
+                playerAnimator.SetFloat("lastDirX", Input.GetAxisRaw("Horizontal"));
+                playerAnimator.SetFloat("lastDirY", Input.GetAxisRaw("Vertical"));
+            }
+        }
+    }
+
+
+
+    private IEnumerator AttackCo() {
+        playerAnimator.SetBool("attacking", true);
+        currentState = PlayerState.attack;
+        yield return null;
+        playerAnimator.SetBool("attacking", false);
+        yield return new WaitForSeconds(.33f);
+        currentState = PlayerState.walk;
     }
 
     /*
@@ -109,12 +150,14 @@ public class Player : MonoBehaviour
 
         if (usingStamina)
         {
-            ghost.makeGhost = true;
+            //speed = 50;
+            //ghost.makeGhost = true;
             Time.timeScale = 0.1F;
             Time.fixedDeltaTime = 0.02F * Time.timeScale;
         }
         else {
-            ghost.makeGhost = false;
+            //speed = 5;
+            //ghost.makeGhost = false;
             Time.timeScale = 1;
             Time.fixedDeltaTime = 0.02F * Time.timeScale;
         }

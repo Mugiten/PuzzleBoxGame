@@ -413,6 +413,11 @@ PrefabInstance:
       propertyPath: playerStaminaBar
       value: 
       objectReference: {fileID: 606833718}
+    - target: {fileID: 1496906703896046768, guid: 801e3973bc3de6a46ab833b422da0e64,
+        type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 801e3973bc3de6a46ab833b422da0e64, type: 3}
 --- !u!1 &373469890
