@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1496906703896046765}
   - component: {fileID: 6594432002967174792}
   - component: {fileID: 5763853692219973979}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: obj_player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -104,6 +104,7 @@ MonoBehaviour:
   canMove: 1
   playerStaminaBar: {fileID: 0}
   ghost: {fileID: 5763853692219973979}
+  currentState: 0
 --- !u!58 &1496906703896046771
 CircleCollider2D:
   m_ObjectHideFlags: 0
