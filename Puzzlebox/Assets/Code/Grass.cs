@@ -19,5 +19,11 @@ public class Grass : MonoBehaviour
 
     public void Erase() {
         anim.SetBool("ifHit", true);
+        StartCoroutine(breakCo());
+    }
+
+    IEnumerator breakCo() {
+        yield return new WaitForSeconds(0.3f);
+        this.gameObject.SetActive(false);
     }
 }

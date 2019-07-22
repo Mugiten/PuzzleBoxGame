@@ -21,5 +21,9 @@ public class PlayerHit : MonoBehaviour
         if (collision.CompareTag("Breakable")) {
             collision.GetComponent<Grass>().Erase();
         }
+
+        if (collision.CompareTag("Button")) {
+            collision.GetComponent<Switch>().Switched();
+        }
     }
 }

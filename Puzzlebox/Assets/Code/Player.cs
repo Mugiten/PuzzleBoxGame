@@ -8,7 +8,8 @@ using UnityEngine.UI;
 public enum PlayerState
 {
     walk,
-    attack
+    attack,
+    interact
 }
 
 public class Player : MonoBehaviour
