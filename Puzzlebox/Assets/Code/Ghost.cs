@@ -27,6 +27,7 @@ public class Ghost : MonoBehaviour
             {
                 GameObject currentGhost = Instantiate(ghost, transform.position, transform.rotation);
                 ghostDelaySeconds = ghostDelay;
+                Destroy(currentGhost, 1f);
             }
         }
     }

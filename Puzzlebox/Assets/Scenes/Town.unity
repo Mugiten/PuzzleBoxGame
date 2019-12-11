@@ -502,6 +502,11 @@ PrefabInstance:
       propertyPath: fullHP
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5763853692219973979, guid: 801e3973bc3de6a46ab833b422da0e64,
+        type: 3}
+      propertyPath: makeGhost
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 801e3973bc3de6a46ab833b422da0e64, type: 3}
 --- !u!1 &373469890
@@ -2044,6 +2049,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3408957502769285120}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &793859722
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793859721}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &793859725
 BoxCollider2D:
   m_ObjectHideFlags: 0
