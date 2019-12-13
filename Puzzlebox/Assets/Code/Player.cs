@@ -79,8 +79,8 @@ public class Player : MonoBehaviour
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x), Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
 
 
-        // Bullet Time.
-        SlowTime();
+        // Dash.
+        Dash();
 
     }
 
@@ -128,10 +128,10 @@ public class Player : MonoBehaviour
     }
 
     /*
-     When you push on the X key, it will decrement the player stamina, and change the bool usingStamina to true. Time will slow down, until the 
-     X key is released, then the stamina will increment, and time will change back to the normal speed. 
+     When you push on the X key, it will decrement the player stamina, and change the bool usingStamina to true. Speed will increase, until the 
+     X key is released, then the stamina will increment, and speed will change back to the normal speed. 
          */
-    public void SlowTime() {
+    public void Dash() {
         usingStamina = false;
 
         if (Input.GetKey("x"))
@@ -151,16 +151,18 @@ public class Player : MonoBehaviour
 
         if (usingStamina)
         {
-            //speed = 50;
-            //ghost.makeGhost = true;
-            Time.timeScale = 0.1F;
-            Time.fixedDeltaTime = 0.02F * Time.timeScale;
+            speed = 7;
+            ghost.makeGhost = true;
+            //Time.timeScale = 0.1F;
+            //Time.fixedDeltaTime = 0.02F * Time.timeScale;
+            playerAnimator.speed = 1.2f;
         }
         else {
-            //speed = 5;
-            //ghost.makeGhost = false;
-            Time.timeScale = 1;
-            Time.fixedDeltaTime = 0.02F * Time.timeScale;
+            speed = 3;
+            ghost.makeGhost = false;
+            //Time.timeScale = 1;
+            //Time.fixedDeltaTime = 0.02F * Time.timeScale;
+            playerAnimator.speed = 1;
         }
     }
 }
