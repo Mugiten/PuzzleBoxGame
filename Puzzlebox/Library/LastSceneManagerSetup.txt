@@ -1,4 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Town.unity
+- path: Assets/Scenes/DungeonTest/DungeonTest.unity
   isLoaded: 1
   isActive: 1
+  isSubScene: 0
