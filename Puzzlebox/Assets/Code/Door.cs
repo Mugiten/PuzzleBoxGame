@@ -2,19 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class Door : Interactable
 {
-    private bool canActivate;
-    private bool hasKey;
+    public bool hasKey;
+    public SpriteRenderer doorSprite;
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){
         
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    void Update(){
+        if (Input.GetKey(KeyCode.Z) && hasKey && canActivate) {
+            doorSprite.enabled = false;
+        }
     }
+
+
+
 }

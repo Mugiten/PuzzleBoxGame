@@ -15,12 +15,9 @@ public enum PlayerState
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField]
-    private float speed;
-    [SerializeField]
-    private Rigidbody2D rgdbdy;
-    [SerializeField]
-    private Animator playerAnimator;
+    [SerializeField] private float speed;
+    [SerializeField] private Rigidbody2D rgdbdy;
+    [SerializeField] private Animator playerAnimator;
     public static Player instance;
     public string areaTransitionName;
 
