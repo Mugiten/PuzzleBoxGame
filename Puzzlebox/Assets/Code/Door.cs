@@ -16,6 +16,7 @@ public class Door : Interactable
     // Door Variables. 
     public bool hasKey;
     public SpriteRenderer doorSprite;
+    public BoxCollider2D doorCollider; 
     public DoorType thisDoorType;
     public bool open = false; 
 
@@ -27,8 +28,18 @@ public class Door : Interactable
 
     // Update is called once per frame
     void Update(){
-        if (Input.GetKey(KeyCode.Z) && hasKey && canActivate) {
-            doorSprite.enabled = false;
+        if (Input.GetKey(KeyCode.Z) && thisDoorType == DoorType.key && canActivate) {
+            Open();
         }
+    }
+
+    public void Open() {
+        doorSprite.enabled = false;
+        doorCollider.enabled = false; 
+        open = true; 
+    }
+
+    public void Close() {
+
     }
 }
