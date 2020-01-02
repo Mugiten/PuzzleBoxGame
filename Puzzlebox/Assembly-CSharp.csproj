@@ -72,6 +72,7 @@
     <Compile Include="Assets\Code\Ghost.cs" />
     <Compile Include="Assets\Code\Grass.cs" />
     <Compile Include="Assets\Code\Interactable.cs" />
+    <Compile Include="Assets\Code\InventoryItem.cs" />
     <Compile Include="Assets\Code\Key.cs" />
     <Compile Include="Assets\Code\Player.cs" />
     <Compile Include="Assets\Code\PlayerHit.cs" />
