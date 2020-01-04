@@ -74,6 +74,7 @@
     <Compile Include="Assets\Code\Interactable.cs" />
     <Compile Include="Assets\Code\InventoryItem.cs" />
     <Compile Include="Assets\Code\Key.cs" />
+    <Compile Include="Assets\Code\PauseManager.cs" />
     <Compile Include="Assets\Code\Player.cs" />
     <Compile Include="Assets\Code\PlayerHit.cs" />
     <Compile Include="Assets\Code\PlayerLoader.cs" />
