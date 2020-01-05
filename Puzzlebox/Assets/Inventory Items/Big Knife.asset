@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Big Knife
   itemDescription: A kitchen knife made by giants.
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 21300000, guid: 1d7691e01db9806409b0ff35caa603b2, type: 3}
   numberHeld: 1
   usable: 0
   unique: 1
