@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 431220cbdec71694688b867cc244247a, type: 3}
   m_Name: Big Knife
   m_EditorClassIdentifier: 
-  itemName: Big Knife
-  itemDescription: A kitchen knife made by giants.
+  itemName: Test Knife
+  itemDescription: 'A knife used for testing. '
   itemImage: {fileID: 21300000, guid: 1d7691e01db9806409b0ff35caa603b2, type: 3}
   numberHeld: 1
   usable: 0

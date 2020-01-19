@@ -18,7 +18,8 @@ public class InventorySlot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        itemImage.sprite = thisItem.itemImage;
+        itemDescription.text = thisItem.itemDescription;
     }
 
     // Update is called once per frame
@@ -27,18 +28,9 @@ public class InventorySlot : MonoBehaviour
         
     }
 
-    public void Setup(InventoryItem newItem, InventoryManager newManager) {
-        thisItem = newItem;
-        thisManager = newManager;
-        if (thisItem) {
-            itemImage.sprite = thisItem.itemImage;
-            itemDescription.text = thisItem.itemDescription;
-        }
-    }
-
     public void ClickedOn() {
         if (thisItem) {
-            thisManager.SetTextAndButton(thisItem.itemDescription, thisItem.usable);
+            thisManager.SetupDescriptionAndButton(thisItem.itemDescription, thisItem.usable, thisItem);
         }
     }
 }
