@@ -91,7 +91,7 @@ public class Player : MonoBehaviour
         // Get the movement.
         if (canMove)
         {
-            rgdbdy.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * speed;
+            rgdbdy.velocity = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0).normalized * speed;
         }
 
         else
@@ -160,6 +160,19 @@ public class Player : MonoBehaviour
             //Time.timeScale = 1;
             //Time.fixedDeltaTime = 0.02F * Time.timeScale;
             playerAnimator.speed = 1;
+        }
+    }
+
+    public void TimeStop() {
+        /* When button is pressed
+            Try using Time.timescale to stop time like pausing or create a class where you can have object.enabled = false.
+            If the player presses the button again or the stamina bar runs out, then object activities resume normally. 
+        */
+
+        usingStamina = false;
+
+        if (Input.GetKey("V")) {
+            //have the objects you want to stop disabled.
         }
     }
 }

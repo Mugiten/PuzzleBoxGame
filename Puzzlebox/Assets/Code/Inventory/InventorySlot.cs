@@ -20,6 +20,7 @@ public class InventorySlot : MonoBehaviour
     {
         itemImage.sprite = thisItem.itemImage;
         itemDescription.text = thisItem.itemDescription;
+        itemName.text = thisItem.itemName;
     }
 
     // Update is called once per frame

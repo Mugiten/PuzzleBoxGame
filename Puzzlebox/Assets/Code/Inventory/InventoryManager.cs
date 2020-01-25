@@ -12,6 +12,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private Text descriptionText;
     [SerializeField] private GameObject useButton;
+    public Text nameText; 
     public InventoryItem currentItem;
     public InventorySlot slots;
 
@@ -44,6 +45,7 @@ public class InventoryManager : MonoBehaviour
 
     public void SetupDescriptionAndButton(string newDescriptionString, bool isButtonUsable, InventoryItem newItem) {
         descriptionText.text = newDescriptionString;
+        nameText.text = newItem.itemName;
         useButton.SetActive(isButtonUsable);
         currentItem = newItem;
     }
