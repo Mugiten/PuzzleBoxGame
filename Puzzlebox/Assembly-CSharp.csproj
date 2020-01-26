@@ -62,30 +62,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Code\AreaEntrance.cs" />
-    <Compile Include="Assets\Code\AreaExit.cs" />
-    <Compile Include="Assets\Code\CameraController.cs" />
-    <Compile Include="Assets\Code\DialogActivator.cs" />
-    <Compile Include="Assets\Code\DialogManager.cs" />
-    <Compile Include="Assets\Code\Door.cs" />
-    <Compile Include="Assets\Code\EssentialsLoader.cs" />
-    <Compile Include="Assets\Code\Ghost.cs" />
-    <Compile Include="Assets\Code\Grass.cs" />
-    <Compile Include="Assets\Code\Interactable.cs" />
     <Compile Include="Assets\Code\Inventory\Inventory.cs" />
     <Compile Include="Assets\Code\Inventory\InventoryItem.cs" />
     <Compile Include="Assets\Code\Inventory\InventoryManager.cs" />
     <Compile Include="Assets\Code\Inventory\InventorySlot.cs" />
     <Compile Include="Assets\Code\Inventory\PlayerInventory.cs" />
-    <Compile Include="Assets\Code\Key.cs" />
-    <Compile Include="Assets\Code\PauseManager.cs" />
-    <Compile Include="Assets\Code\Player.cs" />
-    <Compile Include="Assets\Code\PlayerHit.cs" />
-    <Compile Include="Assets\Code\PlayerLoader.cs" />
-    <Compile Include="Assets\Code\PlayerStats.cs" />
-    <Compile Include="Assets\Code\RedSwitch.cs" />
-    <Compile Include="Assets\Code\Switch.cs" />
-    <Compile Include="Assets\Code\UIFade.cs" />
+    <Compile Include="Assets\Code\PlayerAbilities\Ghost.cs" />
+    <Compile Include="Assets\Code\PlayerInteractableObjects\Box.cs" />
+    <Compile Include="Assets\Code\PlayerInteractableObjects\Door.cs" />
+    <Compile Include="Assets\Code\PlayerInteractableObjects\Grass.cs" />
+    <Compile Include="Assets\Code\PlayerInteractableObjects\Interactable.cs" />
+    <Compile Include="Assets\Code\PlayerInteractableObjects\Key.cs" />
+    <Compile Include="Assets\Code\PlayerInteractableObjects\RedSwitch.cs" />
+    <Compile Include="Assets\Code\PlayerInteractableObjects\Switch.cs" />
+    <Compile Include="Assets\Code\PlayerManager\Player.cs" />
+    <Compile Include="Assets\Code\PlayerManager\PlayerHit.cs" />
+    <Compile Include="Assets\Code\PlayerManager\PlayerLoader.cs" />
+    <Compile Include="Assets\Code\PlayerManager\PlayerStats.cs" />
+    <Compile Include="Assets\Code\UI\AreaEntrance.cs" />
+    <Compile Include="Assets\Code\UI\AreaExit.cs" />
+    <Compile Include="Assets\Code\UI\CameraController.cs" />
+    <Compile Include="Assets\Code\UI\DialogActivator.cs" />
+    <Compile Include="Assets\Code\UI\DialogManager.cs" />
+    <Compile Include="Assets\Code\UI\EssentialsLoader.cs" />
+    <Compile Include="Assets\Code\UI\PauseManager.cs" />
+    <Compile Include="Assets\Code\UI\UIFade.cs" />
     <None Include="Assets\Sprites\Zoria Tileset\readme.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Developer/Documents/GitHub/PuzzleBoxGame/Puzzlebox/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
