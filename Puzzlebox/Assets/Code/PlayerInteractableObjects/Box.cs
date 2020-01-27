@@ -5,7 +5,7 @@ using UnityEngine;
 public class Box : Interactable
 {
     [SerializeField] private Rigidbody2D boxRgdBody;
-    float speed = 3;
+    public float speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,14 +19,6 @@ public class Box : Interactable
     }
 
     public void pushBox() {
-        if (canActivate) {
-            // box changes position.
-            boxRgdBody.velocity = new Vector3(1f, 1f, 0) * speed; 
-        }
-
-        else {
-            // movement stops. 
-            boxRgdBody.velocity = Vector3.zero;
-        }
+        boxRgdBody.velocity = Vector3.zero;
     }
 }

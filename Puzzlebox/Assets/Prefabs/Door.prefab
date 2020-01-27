@@ -45,7 +45,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00057321787, y: -0.49404144}
+  m_Offset: {x: -0.013613701, y: -0.23867416}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -56,7 +56,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.264635, y: 1.9880829}
+  m_Size: {x: 2.4279737, y: 2.4988174}
   m_EdgeRadius: 0
 --- !u!114 &9125835244878842108
 MonoBehaviour:
@@ -71,9 +71,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canActivate: 0
-  isPerson: 1
+  isPerson: 0
   hasKey: 0
-  doorSprite: {fileID: 0}
+  doorSprite: {fileID: 3307472266905534883}
+  doorCollider: {fileID: 3307472266905534893}
   thisDoorType: 0
   open: 0
 --- !u!1 &3307472266905534880
@@ -171,16 +172,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.00000023841858, y: 0.021280289}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.993094, y: 1.9789066}
   m_EdgeRadius: 0
