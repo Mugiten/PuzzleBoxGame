@@ -8,6 +8,7 @@ public class Switch : Interactable
     public string keyName;
     private Animator anim;
     [SerializeField] private Color originalColor;
+    public GameObject switchObject; 
    
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,9 @@ public class Switch : Interactable
     }
 
     public void Switched() {
-        StartCoroutine(ColorCo());
+        if (Input.GetKey(KeyCode.C) && canActivate) {
+            StartCoroutine(ColorCo());
+        }
         if (turnOn) {
             this.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
         }
@@ -35,9 +38,11 @@ public class Switch : Interactable
         yield return new WaitForSeconds(0.3f);
         if (turnOn) {
             turnOn = false;
+            switchObject.SetActive(false);
         }
         else {
             turnOn = true;
+            switchObject.SetActive(true);
         }
     }
 }

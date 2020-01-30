@@ -447,6 +447,7 @@ MonoBehaviour:
   turnOn: 0
   keyName: 
   originalColor: {r: 0, g: 0, b: 0, a: 0}
+  switchObject: {fileID: 3307472266052800278}
 --- !u!224 &397340464 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7231282697934351787, guid: 27544d14395c7c04b8552ba751770cd2,
@@ -6418,6 +6419,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d563a9b53d7c964dbc770779937ac8e, type: 3}
+--- !u!1 &3307472266052800278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3307472266905534880, guid: 9d563a9b53d7c964dbc770779937ac8e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3307472266052800277}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7231282699513434671
 PrefabInstance:
   m_ObjectHideFlags: 0

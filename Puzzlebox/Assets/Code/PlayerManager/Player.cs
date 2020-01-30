@@ -79,6 +79,9 @@ public class Player : MonoBehaviour
         // Dash.
         Dash();
 
+        //Slowing Time
+        //SlowTime();
+
     }
 
     public void SetBounds(Vector3 botLeft, Vector3 topRight) {
@@ -171,8 +174,39 @@ public class Player : MonoBehaviour
 
         usingStamina = false;
 
-        if (Input.GetKey("V")) {
+        if (Input.GetKey("v")) {
             //have the objects you want to stop disabled.
+        }
+    }
+
+    public void SlowTime() {
+        usingStamina = false;
+
+        if (Input.GetKey("b")) {
+            playerStaminaBar.value--;
+            if (playerStaminaBar.value > 0F) {
+                usingStamina = true;
+            }
+        }
+        else {
+            if (playerStaminaBar.value < PlayerStats.instance.fullStamina) {
+                playerStaminaBar.value++;
+            }
+        }
+
+        if (usingStamina) {
+            speed = 15;
+            ghost.makeGhost = true;
+            Time.timeScale = 0.1F;
+            Time.fixedDeltaTime = 0.02F * Time.timeScale;
+            playerAnimator.speed = 10f;
+        }
+        else {
+            speed = 3;
+            ghost.makeGhost = false;
+            Time.timeScale = 1;
+            Time.fixedDeltaTime = 0.02F * Time.timeScale;
+            playerAnimator.speed = 1;
         }
     }
 }
