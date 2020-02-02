@@ -37,6 +37,10 @@ public class Player : MonoBehaviour
     //Creating a PlayerState
     public PlayerState currentState;
 
+    // This is used to test the stoptime.
+    public PatternSwitch StopTimeObject;
+    bool timeFreeze;
+
 
     void Start()
     {
@@ -56,6 +60,7 @@ public class Player : MonoBehaviour
 
         // initializing stamina
         playerStaminaBar.value = PlayerStats.instance.playerStamina;
+        timeFreeze = false; 
     }
 
     // Update is called once per frame
@@ -81,6 +86,8 @@ public class Player : MonoBehaviour
 
         //Slowing Time
         //SlowTime();
+
+        TimeStop();
 
     }
 
@@ -173,9 +180,16 @@ public class Player : MonoBehaviour
         */
 
         usingStamina = false;
-
-        if (Input.GetKey("v")) {
+        if (Input.GetKey("v") && timeFreeze == false) {
             //have the objects you want to stop disabled.
+            StopTimeObject.enabled = false;
+            timeFreeze = true; 
+            //StopTimeObject.SetActive(false); 
+        }
+
+        if (Input.GetKey("v") && timeFreeze == true) {
+            StopTimeObject.enabled = true;
+            timeFreeze = false;
         }
     }
 

@@ -19,13 +19,10 @@ public class Switch : Interactable
     // Update is called once per frame
     void Update()
     {
-        Switched();
     }
 
     public void Switched() {
-        if (Input.GetKey(KeyCode.C) && canActivate) {
-            StartCoroutine(ColorCo());
-        }
+        StartCoroutine(ColorCo());
         if (turnOn) {
             this.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
         }

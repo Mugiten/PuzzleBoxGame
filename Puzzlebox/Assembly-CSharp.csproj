@@ -68,11 +68,13 @@
     <Compile Include="Assets\Code\Inventory\InventorySlot.cs" />
     <Compile Include="Assets\Code\Inventory\PlayerInventory.cs" />
     <Compile Include="Assets\Code\PlayerAbilities\Ghost.cs" />
+    <Compile Include="Assets\Code\PlayerAbilities\TimeKeeper.cs" />
     <Compile Include="Assets\Code\PlayerInteractableObjects\Box.cs" />
     <Compile Include="Assets\Code\PlayerInteractableObjects\Door.cs" />
     <Compile Include="Assets\Code\PlayerInteractableObjects\Grass.cs" />
     <Compile Include="Assets\Code\PlayerInteractableObjects\Interactable.cs" />
     <Compile Include="Assets\Code\PlayerInteractableObjects\Key.cs" />
+    <Compile Include="Assets\Code\PlayerInteractableObjects\PatternSwitch.cs" />
     <Compile Include="Assets\Code\PlayerInteractableObjects\RedSwitch.cs" />
     <Compile Include="Assets\Code\PlayerInteractableObjects\Switch.cs" />
     <Compile Include="Assets\Code\PlayerManager\Player.cs" />
