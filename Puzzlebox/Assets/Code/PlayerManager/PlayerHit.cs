@@ -23,7 +23,7 @@ public class PlayerHit : MonoBehaviour
         }
 
         if (collision.CompareTag("Button")) {
-            collision.GetComponent<Switch>().Switched();
+            collision.GetComponent<Switch>().HitSwitched();
         }
     }
 }

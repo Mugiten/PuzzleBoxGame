@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
     public PlayerState currentState;
 
     // This is used to test the stoptime.
-    public PatternSwitch StopTimeObject;
+    public Switch StopTimeObject;
     bool timeFreeze;
 
 
@@ -143,7 +143,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey("x"))
         {
-            playerStaminaBar.value--;
+            playerStaminaBar.value -= 3;
             if (playerStaminaBar.value > 0F)
             {
                 usingStamina = true;
@@ -152,7 +152,7 @@ public class Player : MonoBehaviour
         else {
             if (playerStaminaBar.value < PlayerStats.instance.fullStamina)
             {
-               playerStaminaBar.value++;
+               playerStaminaBar.value += 1;
             }
         }
 
@@ -160,15 +160,11 @@ public class Player : MonoBehaviour
         {
             speed = 7;
             ghost.makeGhost = true;
-            //Time.timeScale = 0.1F;
-            //Time.fixedDeltaTime = 0.02F * Time.timeScale;
             playerAnimator.speed = 1.2f;
         }
         else {
             speed = 3;
             ghost.makeGhost = false;
-            //Time.timeScale = 1;
-            //Time.fixedDeltaTime = 0.02F * Time.timeScale;
             playerAnimator.speed = 1;
         }
     }
@@ -179,23 +175,28 @@ public class Player : MonoBehaviour
             If the player presses the button again or the stamina bar runs out, then object activities resume normally. 
         */
 
+        // Make an array of switches that use the TimeParentScript
+        TimeParentScript [] pSwitches = FindObjectsOfType<TimeParentScript>();
         usingStamina = false;
-        if (Input.GetKey("v") && timeFreeze == false) {
-            //have the objects you want to stop disabled.
-            StopTimeObject.enabled = false;
-            timeFreeze = true; 
-            //StopTimeObject.SetActive(false); 
-        }
-
-        if (Input.GetKey("v") && timeFreeze == true) {
-            StopTimeObject.enabled = true;
-            timeFreeze = false;
+        if (Input.GetKeyDown("v")) {
+            if (timeFreeze) {
+                foreach (TimeParentScript pswitch in pSwitches) {
+                    pswitch.GetComponent<Switch>().enabled = false;
+                }
+                timeFreeze = false;
+            }
+            else {
+                foreach (TimeParentScript pswitch in pSwitches) {
+                    pswitch.GetComponent<TimeParentScript>().enabled = true;
+                }
+                timeFreeze = true;
+            }
         }
     }
 
     public void SlowTime() {
         usingStamina = false;
-
+        
         if (Input.GetKey("b")) {
             playerStaminaBar.value--;
             if (playerStaminaBar.value > 0F) {
