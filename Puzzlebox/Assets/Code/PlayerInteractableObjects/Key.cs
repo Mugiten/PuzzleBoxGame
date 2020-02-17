@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Key : Interactable
+public class Key : MonoBehaviour
 {
     [SerializeField] private Door door;
     public SpriteRenderer keySprite;
@@ -16,19 +16,10 @@ public class Key : Interactable
         
     }
 
-    public override void OnTriggerEnter2D(Collider2D other){
-        if (other.gameObject.name.Equals("Player")) {
-            door.hasKey = true;
-            keySprite.enabled = false;
+    private void OnTriggerEnter2D(Collider2D other){
+        if (other.CompareTag("Player")) {
+            this.gameObject.SetActive(false);
+            other.GetComponent<PlayerStats>().KeyCounting();
         }
     }
-
-    public override void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.name.Equals("Player")) {
-            door.hasKey = false;
-            keySprite.enabled = true;
-        }
-    }
-
 }

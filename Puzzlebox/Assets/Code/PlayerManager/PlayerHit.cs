@@ -25,5 +25,6 @@ public class PlayerHit : MonoBehaviour
         if (collision.CompareTag("Button")) {
             collision.GetComponent<Switch>().HitSwitched();
         }
+
     }
 }

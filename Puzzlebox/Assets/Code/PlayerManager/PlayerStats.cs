@@ -16,6 +16,10 @@ public class PlayerStats : MonoBehaviour
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
+    public Text keyCountText;
+    public int totKeys;
+
+
 
 
     public static PlayerStats instance; 
@@ -28,6 +32,7 @@ public class PlayerStats : MonoBehaviour
     void Update()
     {
         UIHearts();
+        UIKeys();
     }
 
     // Checks to see how many hearts the player has. 
@@ -50,5 +55,13 @@ public class PlayerStats : MonoBehaviour
                 hearts[x].enabled = false;
             }
         }
+    }
+
+    public void UIKeys() {
+        keyCountText.text = "x " + totKeys.ToString();
+    }
+
+    public void KeyCounting() {
+        totKeys++;
     }
 }
