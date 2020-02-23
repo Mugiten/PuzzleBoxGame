@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Code\Enemies\Enemy.cs" />
     <Compile Include="Assets\Code\Inventory\Inventory.cs" />
     <Compile Include="Assets\Code\Inventory\InventoryItem.cs" />
     <Compile Include="Assets\Code\Inventory\InventoryManager.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Assets\Code\PlayerAbilities\TimeKeeper.cs" />
     <Compile Include="Assets\Code\PlayerAbilities\TimeParentScript.cs" />
     <Compile Include="Assets\Code\PlayerInteractableObjects\Box.cs" />
+    <Compile Include="Assets\Code\PlayerInteractableObjects\Chest.cs" />
     <Compile Include="Assets\Code\PlayerInteractableObjects\Door.cs" />
     <Compile Include="Assets\Code\PlayerInteractableObjects\Grass.cs" />
     <Compile Include="Assets\Code\PlayerInteractableObjects\Interactable.cs" />
@@ -80,6 +82,8 @@
     <Compile Include="Assets\Code\PlayerManager\PlayerHit.cs" />
     <Compile Include="Assets\Code\PlayerManager\PlayerLoader.cs" />
     <Compile Include="Assets\Code\PlayerManager\PlayerStats.cs" />
+    <Compile Include="Assets\Code\Signal.cs" />
+    <Compile Include="Assets\Code\SignalListener.cs" />
     <Compile Include="Assets\Code\UI\AreaEntrance.cs" />
     <Compile Include="Assets\Code\UI\AreaExit.cs" />
     <Compile Include="Assets\Code\UI\CameraController.cs" />

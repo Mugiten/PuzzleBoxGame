@@ -12,4 +12,11 @@ public class InventoryItem : ScriptableObject
     public int numberHeld;
     public bool usable;
     public bool unique;
+
+    // Inventory Item Stats
+
+    public int health;
+    public int stamina;
+    public int power;
+    public int defense; 
 }

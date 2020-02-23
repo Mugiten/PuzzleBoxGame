@@ -26,5 +26,9 @@ public class PlayerHit : MonoBehaviour
             collision.GetComponent<Switch>().HitSwitched();
         }
 
+        if (collision.CompareTag("Enemy")) {
+            Enemy.instance.EnemyHealth -= 1;
+        }
+
     }
 }

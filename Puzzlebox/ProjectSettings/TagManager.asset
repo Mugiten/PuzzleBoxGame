@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Breakable
   - Button
+  - Enemy
   layers:
   - Default
   - TransparentFX
