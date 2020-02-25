@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     [SerializeField] private Animator playerAnimator;
     public static Player instance;
     public string areaTransitionName;
+    public SpriteRenderer receivedItem;
+    public PlayerInventory playerInventory; 
 
     private Vector3 bottomLeftLimit;
     private Vector3 topRightLimit;
@@ -66,7 +68,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (currentState == PlayerState.interact) {
+            return; 
+        }
 
         if (Input.GetKey("c") && currentState != PlayerState.attack) {
             StartCoroutine(AttackCo());
@@ -127,7 +131,22 @@ public class Player : MonoBehaviour
         yield return null;
         playerAnimator.SetBool("attacking", false);
         yield return new WaitForSeconds(.33f);
-        currentState = PlayerState.walk;
+        if (currentState != PlayerState.interact) {
+            currentState = PlayerState.walk;
+        }
+    }
+
+    public void RaiseItem() {
+        if (currentState != PlayerState.interact) {
+            playerAnimator.SetBool("openChest", true);
+            currentState = PlayerState.interact;
+            receivedItem.sprite = playerInventory.currentItem.itemImage;
+        }
+        else {
+            playerAnimator.SetBool("openChest", false);
+            currentState = PlayerState.walk;
+            receivedItem.sprite = null;
+        }
     }
 
     /*

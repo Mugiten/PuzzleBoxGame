@@ -12,6 +12,7 @@ public class InventoryItem : ScriptableObject
     public int numberHeld;
     public bool usable;
     public bool unique;
+    public bool isKey; 
 
     // Inventory Item Stats
 

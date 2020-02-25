@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Code\Enemies\Enemy.cs" />
+    <Compile Include="Assets\Code\FloatValue.cs" />
     <Compile Include="Assets\Code\Inventory\Inventory.cs" />
     <Compile Include="Assets\Code\Inventory\InventoryItem.cs" />
     <Compile Include="Assets\Code\Inventory\InventoryManager.cs" />
