@@ -28,7 +28,7 @@ public class Door : Interactable
 
     // Update is called once per frame
     void Update(){
-        if (Input.GetKey(KeyCode.Z) && canActivate && PlayerStats.instance.totKeys > 0) {
+        if (Input.GetKey(KeyCode.Z) && canActivate && PlayerStats.instance.totKeys > 0 && !open) {
             Open();
         }
     }
