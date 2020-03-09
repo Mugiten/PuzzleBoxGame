@@ -13,7 +13,8 @@ public class Chest : Interactable
     //public GameObject dialogWindow;
     //public Text dialogText;
     protected string[] lines = new string[1];
-    public bool isOpened; 
+    public bool isOpened;
+    public bool signaled; 
     
 
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class Chest : Interactable
     {
         anim = GetComponent<Animator>();
         lines[0] = TrsrItem.itemDescription;
+        signaled = false; 
     }
 
     // Update is called once per frame
@@ -39,17 +41,19 @@ public class Chest : Interactable
                 isOpened = true;
                 raisedItem.Raise();
             }
-            else {
-                ChestIsOpened();
-            }
-            //raisedItem.Raise(); 
+        }
+        else {
+            ChestIsOpened();
         }
         
     }
 
     public void ChestIsOpened() {
-        if (!DialogManager.instance.dialogbox.activeInHierarchy) {
-            raisedItem.Raise();
+        if (!DialogManager.instance.dialogbox.activeInHierarchy && isOpened) {
+            if (!signaled) {
+                raisedItem.Raise();
+                signaled = true; 
+            }
             playerInventory.currentItem = null;
         }
     }
